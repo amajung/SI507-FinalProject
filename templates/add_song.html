@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--CSS Sheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!--JQuery-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+
+  <style>
+    body { margin: 30px; }
+
+    main { text-align: center; }
+
+    .content { margin-top: 30px; }
+
+    audio { margin-top: 15px; }
+
+    p { font-size: 20px; }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .toggle-wrapper {
+      margin-top: 20px;
+    }
+
+    .toggle-button {
+      background: whitesmoke;
+      color: black;
+      text-align: center;
+      padding: 20px 0;
+      display: block;
+      cursor: pointer;
+    }
+    .toggle-menu {
+      display: none;
+    }
+    .toggle-menu ul{
+      list-style: none;
+    }
+
+    .toggle-menu li {
+      text-align: center;
+      border-top: 0.5px solid #1e1e1e;
+      background: whitesmoke;
+    }
+
+    .toggle-menu a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 10px 0;
+    }
+
+    .toggle-menu a:hover {
+      color: white;
+      background: grey;
+    }
+
+  </style>
+
+  <body>
+    <main>
+    <div class="page-header">
+        <h2>This song was added to your playlist:</h2>
+    </div>
+
+    <div class="content">
+        <p> {{ title }} by {{ artist }}</p>
+        <img src= {{artworkUrl}}><br>
+        <audio src = {{previewUrl}} controls></audio>
+    </div>
+
+    <div class="toggle-wrapper">
+      <div class= "toggle-button" id = "toggle-button">Playlist Options</div>
+      <div class="toggle-menu" id = "toggle-menu">
+        <ul>
+          <li><a href="/">View Complete Playlist</a></li>
+          <li><a href="/songs/artist/{{ artist }}">View Playlist by Artist</a></li>
+          <li><a href="/songs/genre/{{ genre }}">View Playlist by Genre</a></li>
+        </ul>
+      </div>
+    </div>
+
+    </main>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='toggle_button.js') }}"></script>
+
+  </body>
+
+</html>

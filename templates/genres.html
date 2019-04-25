@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!--CSS Sheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+
+  <style>
+    body { margin: 30px; }
+
+    main { text-align: center; }
+
+    .content { margin-top: 30px; }
+
+    p { font-size: 20px; }
+  </style>
+
+  <body>
+    <main>
+      <div class="page-header">
+          <h2> My Playlist </h2>
+          <p>Genre: {{ genre }}</p>
+      </div>
+
+      <div class="content">
+        {% for song in mySongs %}
+          <p>{{ song }} </p>
+        {% endfor %}
+
+        {% if not mySongs %}
+          There are no songs of this genre.
+        {% endif %}
+      </div>
+
+    </main>
+  </body>
+
+</html>
