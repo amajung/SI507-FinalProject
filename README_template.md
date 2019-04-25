@@ -55,7 +55,7 @@ The options that appear underneath the button `Playlist Options` when clicked on
   - genres.html
 - static
   - toggle_button.js
-
+DatabaseDiagram.pdf
 
 ---
 ## Code Requirements for Grading
