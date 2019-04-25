@@ -8,19 +8,19 @@ Amanda Jung
 
 ## Project Description
 
-The project will allow users to view and add songs to their playlist database.
+The project will allow users to add songs to and view their playlist database.
 
 ## How to run
 
 1. First, you should install all requirements with `pip install -r requirements.txt`
 2. Second, you should run the file `SI507project_tools.py` with the code `python SI507project_tools.py`
-3. To access the Flask web application, you need to locate, copy, and paste the web address given through the console into a web browser
+3. To access the Flask web application, you need to locate and copy the web address given through the console and paste it into a web browser
 
 ## How to use
 
 1. To begin, start adding songs to your playlist database through the route `/<add/song/<artist/<song>`. Input your favorite artists and songs in the placeholders accordingly as indicated by the route.
-  - Note 1: Artist names and songs must be entered with accurate and complete spelling and punctuation in order for the application to work. A message indicating so will appear.
-  - Note 2: If a song already exits in the playlist, a messaged indicating so will appear.
+  - Note 1: Artist names and songs must be entered with accurate and complete spelling and punctuation in order for the application to work. A message indicating so will appear (i.e. `Song not found. Please check spelling and punctuation of song or enter another song.`).
+  - Note 2: If a song already exits in the playlist, a message indicating so will appear (i.e. `This song already exists in the database.`).
 
 2. Once you correctly input the song you want to add in the route `/<add/song/<artist/<song>`, the song will automatically add it to your playlist database and the page corresponding to the route will appear with information about the song (i.e. song name, artist, cover art, and audio preview). The page will also have a button labeled `Playlist Options` that can be toggled opened by clicking on it.
 
@@ -31,6 +31,7 @@ The options that appear underneath the button `Playlist Options` when clicked on
 
 2. Once you have songs added to your playlist, you can view your complete playlist or by artist or genre based on the routes indicated above.
   - Note 1: Empty playlists will indicate so on the page (i.e. 'There are no songs in this playlist yet', 'There are no songs by this artist yet.', 'There are no songs of this genre yet.').
+  - Note 1: Artist names and genres must be entered with accurate and complete spelling and punctuation in order for the application to work.
 
 ## Routes in this application
 - `/` -> This is the home page and will show the current songs in the playlist that the user has added.
@@ -67,13 +68,13 @@ Below is a list of the requirements listed in the rubric for you to copy and pas
 ### General
 - [x] Project is submitted as a Github repository
 - [x] Project includes a working Flask application that runs locally on a computer
-- [ ] Project includes at least 1 test suite file with reasonable tests in it.
-- [ ] Includes a `requirements.txt` file containing all required modules to run program
+- [x] Project includes at least 1 test suite file with reasonable tests in it.
+- [x] Includes a `requirements.txt` file containing all required modules to run program
 - [x] Includes a clear and readable README.md that follows this template
 - [x] Includes a sample .sqlite/.db file
-- [ ] Includes a diagram of your database schema
+- [x] Includes a diagram of your database schema
 - [x] Includes EVERY file needed in order to run the project
-- [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
+- [x] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
 ### Flask Application
 - [x] Includes at least 3 different routes
